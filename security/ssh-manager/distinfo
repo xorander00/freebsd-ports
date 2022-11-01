@@ -1,0 +1,5 @@
+TIMESTAMP = 1665018440
+SHA256 (go/security_ssh-manager/ssh-manager-v1.1.0/v1.1.0.mod) = 5d209b497e2e067f94f8543f9a4f22d00fa868ede2865eda8297e4aae8ed206c
+SIZE (go/security_ssh-manager/ssh-manager-v1.1.0/v1.1.0.mod) = 3649
+SHA256 (go/security_ssh-manager/ssh-manager-v1.1.0/v1.1.0.zip) = cd77c4baa9b2c91e04d34f3c84ea55ca079c54fe4eea1d91226b7b518844355b
+SIZE (go/security_ssh-manager/ssh-manager-v1.1.0/v1.1.0.zip) = 63493
