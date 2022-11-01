@@ -1,0 +1,18 @@
+--- Cargo.lock.orig	2022-07-29 18:15:00 UTC
++++ Cargo.lock
+@@ -349,7 +349,6 @@ dependencies = [
+ [[package]]
+ name = "cursive_table_view"
+ version = "0.14.0-alpha.1"
+-source = "git+https://github.com/luryus/cursive_table_view#3d84964e4f642894e9d19aa7fe95bc2354452aee"
+ dependencies = [
+  "cursive_core",
+ ]
+@@ -2032,7 +2031,6 @@ dependencies = [
+ [[package]]
+ name = "x11-clipboard"
+ version = "0.6.1+multitarget.1"
+-source = "git+https://github.com/luryus/x11-clipboard?tag=v0.6.1+multitarget.1#693d3786bc206923d4ba5473ad3304d4b5b6b775"
+ dependencies = [
+  "xcb",
+ ]
