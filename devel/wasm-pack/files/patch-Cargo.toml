@@ -1,0 +1,11 @@
+--- Cargo.toml.orig	2022-10-07 01:58:21 UTC
++++ Cargo.toml
+@@ -46,7 +46,7 @@ tempfile = "3"
+ 
+ [features]
+ # OpenSSL is vendored by default, can use system OpenSSL through feature flag.
+-default = ['openssl/vendored']
++default = []
+ 
+ # Treat compiler warnings as a build error.
+ # This only runs in CI by default
