@@ -1,0 +1,18 @@
+PORTNAME=								pytz
+PORTVERSION=						2022.2.1
+PORTEPOCH=							1
+CATEGORIES=							devel python
+MASTER_SITES= 					CHEESESHOP
+PKGNAMEPREFIX=					${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=							lwhsu@FreeBSD.org
+COMMENT=								World Timezone Definitions for Python
+
+LICENSE=								MIT
+LICENSE_FILE=						${WRKSRC}/LICENSE.txt
+
+USES=										python
+USE_PYTHON=							autoplist distutils allflavors
+NO_ARCH=								yes
+
+.include <bsd.port.mk>
