@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# PROVIDE: lakefs
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+load_rc_config $name
+
+name=lakefs
+rcvar=lakefs_enable
+
+lakefs_enable=${lakefs_enable:-"NO"}
+lakefs_user=${lakefs_user:-root}
+lakefs_group=${lakefs_user:-wheel}
+lakefs_datadir=${lakefs_datadir:-/var/db/lakefs}
+lakefs_config=${lakefs_config:-/usr/local/etc/lakefs.yml}
+lakefs_logfile=${lakefs_logfile:-/var/log/lakefs.log}
+
+procname=%%PREFIX%%/bin/lakefs
+command="/usr/sbin/daemon"
+command_args="-u %%USER%% -o ${lakefs_logfile} -t ${name} ${procname} -w ${lakefs_datadir} -c ${lakefs_config} ${lakefs_args}"
+
+start_precmd=lakefs_startprecmd
+
+lakefs_startprecmd() {
+  if [ ! -d "${lakefs_datadir}" ]; then
+    install -o ${lakefs_user} -g ${lakefs_group} -d "${lakefs_datadir}"
+  fi
+}
+
+run_rc_command "$1"
