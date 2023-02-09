@@ -1,0 +1,3 @@
+%%PREFIX%%/bin/%%NAME%%
+%%PREFIX%%/share/examples/%%NAME%%/config.toml.sample
+%%PREFIX%%/share/fish/completions/%%NAME%%.fish

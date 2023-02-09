@@ -1,0 +1,13 @@
+[
+{ type: install
+  message: <<EOM
+User configuration file path:
+  ~/.config/rtx/config.toml
+
+To activate in your shell:
+  $ echo 'eval "$(rtx activate -s bash)"' >> ~/.bashrc
+  $ echo 'eval "$(rtx activate -s zsh)"' >> ~/.zshrc
+  $ echo 'rtx activate -s fish | source' >> ~/.config/fish/config.fish
+EOM
+}
+]
