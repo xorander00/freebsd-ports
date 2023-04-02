@@ -10,6 +10,7 @@ WWW=												https://github.com/less/less.js
 
 USES=												nodejs
 FETCH_DEPENDS+=							npm:www/npm
+RUN_DEPENDS+= 							node:www/node
 NO_ARCH=										yes
 
 MASTER_SITES=
