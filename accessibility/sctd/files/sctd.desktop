@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=sctd
+Comment=sctd
+GenericName=sctd
+Categories=System;
+
+Exec=sctd
+TryExec=sctd
+
+Type=Application
+NoDisplay=false
+Terminal=false
+StartupNotify=false
+Encoding=UTF-8

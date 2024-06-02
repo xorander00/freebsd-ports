@@ -1,0 +1,33 @@
+version: 3
+dotenv: ['Taskhost.env', 'Taskbase.env']
+includes:
+  "":
+    taskfile: ../../Taskutil.yml
+    internal: true
+
+vars:
+  DISTVERSION:
+    sh: make -v DISTVERSION
+  WRKDIR:
+    sh: make -v WRKDIR
+  WRKSRC:
+    sh: make -v WRKSRC
+  WRKREL: '{{ .WRKSRC | trimPrefix .WRKDIR | trimPrefix "/" }}'
+  DISTFILE_PORT:
+    sh: make -v DISTFILE_PORT
+  DISTFILE_PORT_CONTENT: >-
+    "{{ .WRKREL }}/web/dist/"
+
+tasks:
+  default:
+    desc: Generate DISTFILE_PORT
+    silent: true
+    interactive: false
+    dir: '.local/'
+    vars:
+      GIT_URL: 'https://github.com/user/repo'
+      TBZ_URL: 'https://example.com/download/app-{{ .DISTVERSION }}.tar.bz2'
+    cmds:
+      - |
+        {{ .TASKAPIS }}
+        {{ .GUM_INFO }} "TODO: Fetch, build, generate, and rsync DISTFILE_PORT..."

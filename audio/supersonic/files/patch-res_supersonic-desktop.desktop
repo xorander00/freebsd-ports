@@ -1,0 +1,13 @@
+--- res/supersonic-desktop.desktop.orig	2024-02-25 16:33:07 UTC
++++ res/supersonic-desktop.desktop
+@@ -3,8 +3,7 @@ Comment=A lightweight cross-platform desktop client fo
+ Version=1.0
+ Name=Supersonic
+ Comment=A lightweight cross-platform desktop client for Subsonic music servers
+-Path=/usr/bin
+-Exec=supersonic-desktop
++Exec=supersonic
+ Terminal=false
+-Icon=supersonic-desktop
++Icon=supersonic
+ Categories=Audio;AudioVideo

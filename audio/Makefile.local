@@ -1,0 +1,7 @@
+SUBDIR += rustplayer
+SUBDIR += sublime-music
+SUBDIR += supersonic
+SUBDIR += termusic
+SUBDIR += ytui-music
+
+.include <bsd.port.subdir.mk>
